@@ -18,7 +18,12 @@ namespace Task_Manager_Application.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult task()
+        {
+            return View();
+        }
+
+        public IActionResult add_task()
         {
             return View();
         }

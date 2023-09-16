@@ -1,0 +1,103 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+    .task-item:last-child {
+        border-bottom: none;
+    }
+
+    .task-item .task-title {
+        flex-grow: 1;
+    }
+
+    .task-item button {
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .task-item button:hover {
+            background-color: #d32f2f;
+        }
+
+.add-task-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.add-task-form input[type="text"],
+.add-task-form textarea,
+.add-task-form input[type="date"],
+.add-task-form select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .add-task-form select {
+        background-color: #f4f4f4;
+    }
+
+    .add-task-form input[type="text"] {
+        flex-grow: 1;
+        padding: 5px;
+    }
+
+    .add-task-form button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .add-task-form button:hover {
+            background-color: #388e3c;
+        }

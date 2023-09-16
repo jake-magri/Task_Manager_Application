@@ -85,3 +85,9 @@ C:\Users\Secre\source\repos\Task_Manager_Application\obj\Debug\net7.0\refint\Tas
 C:\Users\Secre\source\repos\Task_Manager_Application\obj\Debug\net7.0\Task_Manager_Application.pdb
 C:\Users\Secre\source\repos\Task_Manager_Application\obj\Debug\net7.0\Task_Manager_Application.genruntimeconfig.cache
 C:\Users\Secre\source\repos\Task_Manager_Application\obj\Debug\net7.0\ref\Task_Manager_Application.dll
+C:\Users\Secre\source\repos\Task_Manager_Application\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Secre\source\repos\Task_Manager_Application\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Secre\source\repos\Task_Manager_Application\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Secre\source\repos\Task_Manager_Application\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Secre\source\repos\Task_Manager_Application\obj\Debug\net7.0\scopedcss\Views\Home\add_task.cshtml.rz.scp.css
+C:\Users\Secre\source\repos\Task_Manager_Application\obj\Debug\net7.0\scopedcss\Views\Home\Index.cshtml.rz.scp.css

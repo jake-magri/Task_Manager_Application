@@ -1,3 +1,163 @@
+/* _content/Task_Manager_Application/Views/Home/add_task.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-161cscxiv9] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-161cscxiv9] {
+  color: #0077cc;
+}
+
+.btn-primary[b-161cscxiv9] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-161cscxiv9], .nav-pills .show > .nav-link[b-161cscxiv9] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-161cscxiv9] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-161cscxiv9] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-161cscxiv9] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-161cscxiv9] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.box[b-161cscxiv9] {
+    width: 800px;
+    height: 50px;
+    background-color: #cdfecd;
+    border: 2px solid #2980b9;
+}
+
+.footer[b-161cscxiv9] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/Task_Manager_Application/Views/Home/Index.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+body[b-d6lnnlacws] {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header[b-d6lnnlacws] {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container[b-d6lnnlacws] {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1[b-d6lnnlacws] {
+    font-size: 24px;
+}
+
+.task-list[b-d6lnnlacws] {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item[b-d6lnnlacws] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+    .task-item:last-child[b-d6lnnlacws] {
+        border-bottom: none;
+    }
+
+    .task-item .task-title[b-d6lnnlacws] {
+        flex-grow: 1;
+    }
+
+    .task-item button[b-d6lnnlacws] {
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .task-item button:hover[b-d6lnnlacws] {
+            background-color: #d32f2f;
+        }
+
+.add-task-form[b-d6lnnlacws] {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.add-task-form input[type="text"][b-d6lnnlacws],
+.add-task-form textarea[b-d6lnnlacws],
+.add-task-form input[type="date"][b-d6lnnlacws],
+.add-task-form select[b-d6lnnlacws] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .add-task-form select[b-d6lnnlacws] {
+        background-color: #f4f4f4;
+    }
+
+    .add-task-form input[type="text"][b-d6lnnlacws] {
+        flex-grow: 1;
+        padding: 5px;
+    }
+
+    .add-task-form button[b-d6lnnlacws] {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .add-task-form button:hover[b-d6lnnlacws] {
+            background-color: #388e3c;
+        }
 /* _content/Task_Manager_Application/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

@@ -7,6 +7,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System.Runtime.Serialization;
 
 
 namespace Configuring
@@ -22,12 +26,45 @@ namespace Configuring
 
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddDbContext<TaskManagerDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             // Add other services, authentication, etc.
+            services.AddControllers();
+            services.AddSwaggerGen();
         }
 
+
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Task_Manager API V1");
+                c.RoutePrefix = string.Empty;
+            });
+            
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseHsts();
+            }
+            
+            app.UseRouting();
+            app.UseHttpsRedirection();
+
+            // Configure middleware for authentication, CORS, etc.
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+        }
         public class TaskManagerDbContext : DbContext
         {
             public TaskManagerDbContext(DbContextOptions<TaskManagerDbContext> options) : base(options) 
@@ -44,12 +81,12 @@ namespace Configuring
                 modelBuilder.Entity<Tasks>()
                     .HasKey(t => t.TaskId); // Define the primary key for Tasks
                 modelBuilder.Entity<Tasks>()
-                    .Property(ti => ti.TaskName)
+                    .Property(t => t.TaskName)
                     .HasMaxLength(100);
                 modelBuilder.Entity<Tasks>()
-                    .HasOne(us => us.User) // Defines the realationship to Users
-                    .WithMany(ta => ta.Tasks) // Defines the inverse navigaton property in Users
-                    .HasForeignKey(f => f.UserId); // Specifies the foreign key
+                    .HasOne(t => t.User) // Defines the realationship to Users
+                    .WithMany(t => t.Tasks) // Defines the inverse navigaton property in Users
+                    .HasForeignKey(u => u.UserId); // Specifies the foreign key
 
                 modelBuilder.Entity<Users>()
                     .HasKey(u => u.UserId); // Define the primary key for Users
@@ -57,10 +94,10 @@ namespace Configuring
                     .Property(u => u.Username)
                     .HasMaxLength(50);
                 modelBuilder.Entity<Users>()
-                    .Property(e => e.Email)
+                    .Property(u => u.Email)
                     .HasMaxLength(254);
                 modelBuilder.Entity<Users>()
-                    .Property(p => p.Password)
+                    .Property(u => u.Password)
                     .HasMaxLength(60);
             }
         }
@@ -93,30 +130,12 @@ namespace Configuring
 
         public enum TaskStatus
         {
+            [EnumMember(Value = "Open")]
             Open,
+            [EnumMember(Value = "In Progress")]
             In_Progress, // Match the PostgreSQL enum value 'In Progress' using underscores
+            [EnumMember(Value = "Closed")]
             Closed
-        }
-
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                // Add production error handling here.
-            }
-
-            app.UseRouting();
-
-            // Configure middleware for authentication, CORS, etc.
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
         }
     }
 }

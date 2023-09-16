@@ -1,8 +1,40 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <div class="container">
+        <h2>Tasks</h2>
+        <form class="add-task-form">
+            <input type="text" placeholder="Task Name" />
+            <textarea placeholder="Task Description"></textarea>
+            <input type="date" placeholder="Due Date" />
+            <select>
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Closed">Closed</option>
+            </select>
+            <button>Add</button>
+        </form>
+        <ul class="task-list">
+            <li class="task-item">
+                <span class="task-title">Task 1</span>
+                <button>Delete</button>
+            </li>
+            <li class="task-item">
+                <span class="task-title">Task 2</span>
+                <button>Delete</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

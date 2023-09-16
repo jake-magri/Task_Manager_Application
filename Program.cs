@@ -1,4 +1,11 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Mvc;
+using Task_Manager_Application.Controllers;
+using Task_Manager_Application.Models;
 using Microsoft.EntityFrameworkCore;
 using Task_Manager_Application.Data;
 using static Configuring.Startup;
@@ -14,6 +21,9 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<TaskManagerDbContext>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 builder.Services.AddDbContext<TaskManagerDbContext>(options => options.UseNpgsql(connectionString));
 var app = builder.Build();
 
@@ -40,6 +50,8 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseSwagger();
+app.UseSwaggerUI();
 app.MapRazorPages();
 
 app.Run();

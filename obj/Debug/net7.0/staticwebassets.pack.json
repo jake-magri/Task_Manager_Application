@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Secre\\source\\repos\\Task_Manager_Application\\Views\\Home\\Index.cshtml.js",
+      "PackagePath": "staticwebassets\\Views\\Home\\Index.cshtml.js"
+    },
+    {
       "Id": "C:\\Users\\Secre\\source\\repos\\Task_Manager_Application\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Task_Manager_Application.bundle.scp.css",
       "PackagePath": "staticwebassets\\Task_Manager_Application.bundle.scp.css"
     },
