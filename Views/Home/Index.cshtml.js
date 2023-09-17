@@ -26,7 +26,7 @@ fetch("/api/tasks", {
     })
     .then(data => {
         // Handle the response data, e.g., display a success message
-        console.writeline("Task has been sent!");
+        console.log("Task has been sent!");
     })
     .catch(error => {
         console.error("Error:", error);

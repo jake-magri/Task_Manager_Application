@@ -25,7 +25,7 @@ namespace Task_Manager_Application.Controllers
         }
 
         [HttpGet]
-        [Route("{id:int}")]
+        [Route("{id}")]
         [ActionName("GetTaskById")]
         public async Task<IActionResult> GetTaskById([FromRoute]int id)
         {
@@ -52,7 +52,7 @@ namespace Task_Manager_Application.Controllers
         }
 
         [HttpPut]
-        [Route("{id:int}")]
+        [Route("{id}")]
         public async Task<IActionResult> UpdateNote([FromRoute] int id, [FromBody] Tasks updatedTask)
         {
             var existingTask = await taskManagerDbContext.task.FindAsync(id);
@@ -73,7 +73,7 @@ namespace Task_Manager_Application.Controllers
         }
 
         [HttpDelete]
-        [Route("{id:int}")]
+        [Route("{id}")]
         public async Task<IActionResult> DeleteTask([FromRoute] int id)
         {
             var existingTask = await taskManagerDbContext.task.FindAsync(id);
